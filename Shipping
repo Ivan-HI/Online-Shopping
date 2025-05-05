@@ -1,0 +1,32 @@
+// Shipping.java
+public class Shipping {
+    private int shippingId;
+    private String addressLine;
+    private String shippingType;
+
+    public Shipping() {}
+
+    public Shipping(int shippingId, String addressLine, String shippingType) {
+        this.shippingId = shippingId;
+        this.addressLine = addressLine;
+        this.shippingType = shippingType;
+    }
+
+    // Getters and Setters
+    public int getShippingId() { return shippingId; }
+    public void setShippingId(int shippingId) { this.shippingId = shippingId; }
+    public String getAddressLine() { return addressLine; }
+    public void setAddressLine(String addressLine) { this.addressLine = addressLine; }
+    public String getShippingType() { return shippingType; }
+    public void setShippingType(String shippingType) { this.shippingType = shippingType; }
+
+    public void updateAddress() {
+        System.out.println("Shipping address updated.");
+    }
+
+    @Override
+    public String toString() {
+        return "Shipping: " + addressLine + " (" + shippingType + ")";
+    }
+}
+
