@@ -1,0 +1,29 @@
+// Seller.java
+public class Seller {
+    private int sellerId;
+    private String name;
+    private Product[] products;
+
+    public Seller() {
+        products = new Product[50];
+    }
+
+    public Seller(int sellerId, String name, Product[] products) {
+        this.sellerId = sellerId;
+        this.name = name;
+        this.products = products;
+    }
+
+    // Getters and Setters
+    public int getSellerId() { return sellerId; }
+    public void setSellerId(int sellerId) { this.sellerId = sellerId; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public Product[] getProducts() { return products; }
+    public void setProducts(Product[] products) { this.products = products; }
+
+    public void disableUser(Customer customer) {
+        customer.setEnabled(false);
+        System.out.println("Customer " + customer.getUsername() + " has been disabled.");
+    }
+}
